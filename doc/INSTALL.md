@@ -47,7 +47,7 @@ nvidia-docker run -it -v $HOST-SIMPLEDET-DIR:$CONTAINER-WORKDIR rogerchen/simple
 # Install a patched cocotools for python3
 git clone https://github.com/RogerChern/cocoapi
 cd cocoapi/PythonAPI
-python3 setup.py install
+python setup.py install
 ```
 
 #### Install MXNet
@@ -61,24 +61,24 @@ sudo apt-get install -y libopenblas-dev
 ```bash
 # Specify simpledet directory
 export SIMPLEDET_DIR=/path/to/simpledet
-export COCOAPI_DIR = /path/to/cocoapi
+export COCOAPI_DIR=/path/to/cocoapi
 
 git clone https://github.com/apache/incubator-mxnet mxnet
 cd mxnet
 git checkout 1.3.1
 git submodule init
-git submodule update:
-echo "USE_OPENCV = 0" >> ./config.mk
-echo "USE_BLAS = openblas" >> ./config.mk
-echo "USE_CUDA = 1" >> ./config.mk
-echo "USE_CUDA_PATH = /usr/local/cuda" >> ./config.mk
-echo "USE_CUDNN = 1" >> ./config.mk
-echo "USE_NCCL = 1" >> ./config.mk
-echo "USE_DIST_KVSTORE = 1" >> ./config.mk
+git submodule update
+echo "USE_OPENCV=0" >> ./config.mk
+echo "USE_BLAS=openblas" >> ./config.mk
+echo "USE_CUDA=1" >> ./config.mk
+echo "USE_CUDA_PATH=/usr/local/cuda" >> ./config.mk
+echo "USE_CUDNN=1" >> ./config.mk
+echo "USE_NCCL=1" >> ./config.mk
+echo "USE_DIST_KVSTORE=1" >> ./config.mk
 cp -r $SIMPLEDET_DIR/operator_cxx/* src/operator/
 mkdir -p src/coco_api
 cp -r $COCOAPI_DIR/common src/coco_api/
 make -j
 cd python
-python3 setup.py install
+python setup.py install
 ```
