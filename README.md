@@ -52,10 +52,10 @@ data/
 
 and run the helper script to generate roidb
 ```bash
-python3 utils/generate_roidb.py --dataset coco --dataset-split train2014
-python3 utils/generate_roidb.py --dataset coco --dataset-split valminusminival2014
-python3 utils/generate_roidb.py --dataset coco --dataset-split minival2014
-python3 utils/generate_roidb.py --dataset coco --dataset-split test-dev2017
+python utils/generate_roidb.py --dataset coco --dataset-split train2014
+python utils/generate_roidb.py --dataset coco --dataset-split valminusminival2014
+python utils/generate_roidb.py --dataset coco --dataset-split minival2014
+python utils/generate_roidb.py --dataset coco --dataset-split test-dev2017
 ```
 
 #### Deploy dependency and compile extension
@@ -69,10 +69,10 @@ git clone https://github.com/RogerChern/mxnext
 
 ```bash
 # train
-python3 detection_train.py --config config/detection_config.py
+python detection_train.py --config config/detection_config.py
 
 # test
-python3 detection_test.py --config config/detection_config.py
+python detection_test.py --config config/detection_config.py
 ```
 
 
