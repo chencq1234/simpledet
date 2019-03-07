@@ -60,8 +60,11 @@ sudo apt-get install -y libopenblas-dev
 
 ```bash
 # Specify simpledet directory
-export SIMPLEDET_DIR=/path/to/simpledet
-export COCOAPI_DIR=/path/to/cocoapi
+export SIMPLEDET_DIR=/path/to/simpledet/
+# export SIMPLEDET_DIR=/home/chencq/simpledet/
+export COCOAPI_DIR=/path/to/cocoapi/
+# export COCOAPI_DIR=/home/chencq/cocoapi/
+
 
 git clone https://github.com/apache/incubator-mxnet mxnet
 cd mxnet
