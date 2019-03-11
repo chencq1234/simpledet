@@ -56,6 +56,9 @@ python utils/generate_roidb.py --dataset coco --dataset-split train2014
 python utils/generate_roidb.py --dataset coco --dataset-split valminusminival2014
 python utils/generate_roidb.py --dataset coco --dataset-split minival2014
 python utils/generate_roidb.py --dataset coco --dataset-split test-dev2017
+
+python utils/generate_roidb.py --dataset less_point89 --dataset-split train89
+python utils/generate_roidb.py --dataset less_point89 --dataset-split valid89
 ```
 
 #### Deploy dependency and compile extension
